@@ -1,0 +1,53 @@
+#Grades with function
+#give user instructions
+print "Enter integers between 0 and 100."
+print "=" *30
+
+#Get user input for a numerical grade for five classes
+math_score = int(raw_input("Enter your score for Math: "))
+english_score=int(raw_input("Enter your score for English: "))
+pe_score= int(raw_input("Enter your score for PE: "))
+science_score= int(raw_input("Enter your score for Science:"))
+art_score= int(raw_input("Enter your score for Art: "))
+
+#let's style it up a little bit
+print "=" * 30
+
+#Then we need the function input
+def letter_grade(subject, numerical_score):
+  grade = ""
+  if 93 <= numerical_score <= 100:
+    grade= "A"
+  elif 90 <= numerical_score < 93:
+    grade= "A-"
+  elif 87 <= numerical_score < 90:
+    grade= "B+"
+  elif 83 <= numerical_score < 87:
+    grade= "B"
+  elif 80 <= numerical_score < 83:
+    grade= "B-"
+  elif 77 <= numerical_score < 80:
+    grade= "C+"
+  elif 73 <= numerical_score < 77:
+    grade= "C"
+  elif 70 <= numerical_score < 73:
+    grade= "C-"
+  elif 67 <= numerical_score < 70:
+    grade= "D+"
+  elif 63 <= numerical_score < 67:
+    grade= "D"
+  elif 60 <= numerical_score < 63:
+    grade= "D-"
+  elif numerical_score < 60:
+    grade= "F"
+  else:
+    print "I'm sorry. That's not a valid integer. Please try again."
+  
+  print "Your %s grade of %d is a %s." % (subject, numerical_score, grade)
+
+#Then we need to print the letter grade for all of the classes
+letter_grade("Math", math_score)
+letter_grade("English", english_score)
+letter_grade("PE", pe_score)
+letter_grade("Science", science_score)
+letter_grade("Art", art_score)
